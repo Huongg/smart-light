@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link href='{{ url_for('static', filename='css/main.css')}}' rel='stylesheet'>
+    <link href='{{ url_for('static', filename='css/buttons.css')}}' rel='stylesheet'>
+
+    <script type='text/javascript' src='{{ url_for('static', filename='src/index.js') }}'></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo+Chettan' rel='stylesheet' type='text/css'>
+    <title>Bird Alarm</title>
+  </head>
+  <body>
+    
+      <!-- <div class='contact-form'>
+        <p>Hello please fill in the form</p>
+        <form method="POST" action='/signup'>
+          <div>
+              <label for='email'>Email Address</label>
+              <input type='email' class='email-address' name='email' required='required'>
+          </div>
+          
+          <div>
+              <label for='user-name'>User Name</label>
+              <input type='username' class='user-name' name='username' required='required'>
+          </div>
+        
+          <input type='submit' value='Submit' class='submit-button'>
+        </form>
+      </div> -->
+
+    <div class='main-body'>
+      <header class="header">
+          <h1></h1>
+      </header>
+  
+      <!-- <form class='signal-wrapper'> -->
+        {% if signal %}
+          <div id='signal-icon' class='loading' src=''></div>
+        {% else %}
+          <div id='signal-icon' class='light-bulb'></div>
+        {% endif %}
+
+      <!-- </form> -->
+
+      <div class='button-wrapper'>
+          <button id='red' class='button' onclick='handleClick(red)'>
+              <!-- <div class='button-icon'></div> -->
+              <p class='button-text'>Red</p>
+          </button>
+
+          <button id='yellow' class='button' onclick='handleClick(yellow)'>
+              <!-- <div class='button-icon'></div> -->
+              <p class='button-text'>Yellow</p>
+          </button>
+
+          <button id='blue' class='button' onclick='handleClick(blue)'>
+              <!-- <div class='button-icon'></div> -->
+              <p class='button-text'>Blue</p>
+          </button>
+
+          <button id='pink' class='button' onclick='handleClick(pink)'>
+              <!-- <div class='button-icon'></div> -->
+              <p class='button-text'>Pink</p>
+          </button>
+
+          <button id='green' class='button' onclick='handleClick(green)'>
+            <!-- <div class='button-icon'></div> -->
+            <p class='button-text'>Green</p>
+          </button>
+
+          <button id='mixed' class='button' onclick='handleClick(mixed)'>
+            <!-- <div class='button-icon'></div > -->
+            <p class='button-text'>All Of Them</p>
+          </button>
+
+          <button id='stopit' class='button' onclick='handleClick(stopit)'>
+            <!-- <div class='button-icon'></div> -->
+            <p class='button-text'>STOP</p>
+          </button>
+      </div>
+    </div>
+  </body>
+</html>
