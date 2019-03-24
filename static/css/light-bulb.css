@@ -1,0 +1,324 @@
+#signal-icon {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-self: center;
+
+   color: #FFCC02;
+   position: relative;
+
+   height: 52vmin;
+   width: 40vmin;
+
+   margin-bottom: 200px;
+   margin-top: 50px;
+}
+ 
+#bulb {
+   position: relative;
+   width: inherit;
+   height: inherit;
+   
+   transition: color 400ms linear;
+   -webkit-filter: drop-shadow(0 0 20px);
+           filter: drop-shadow(0 0 20px);
+   z-index: 1;
+ }
+ 
+ #bulb-top {
+   border-radius: 50%;
+   background: radial-gradient(circle at 20vmin 20vmin, #ff0 0%, #FFCC02 40%, #FFCC02 80%, transparent 100%);
+   width: 40vmin;
+   height: 40vmin;
+ }
+ 
+ #bulb-middle {
+   border-top: 20vmin solid  #FFCC02;;
+   border-left: 10vmin solid transparent;
+   border-right: 10vmin solid transparent;
+   position: absolute;
+   height: 0;
+   bottom: 2px;
+   width: 12.122121212vmin;
+   left: calc(50% - 40vmin/2.5);
+ }
+ 
+ #bulb-bottom {
+   background:  #FFCC02;
+   border-radius: 50%;
+   position: absolute;
+   height: 13.3333333333vmin;
+   width: 20vmin;
+   left: calc(50% - 40vmin/4);
+   bottom: 0;
+ }
+ 
+#base {
+   position: absolute;
+    width: 9vmin;
+    bottom: 0;
+
+    left: 13.5vmin;
+    top: 51.5vmin;
+    border-top: 50px solid #544;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    z-index: 1;
+ }
+
+ /* RED */
+ .red #bulb {
+   -webkit-filter: drop-shadow(0 0 20px rgb(222, 76, 76));
+   filter: drop-shadow(0 0 20px rgb(222, 76, 76));
+ }
+
+.red #bulb-top {
+   background: radial-gradient(circle at 20vmin 20vmin, rgb(235, 152, 152) 0%, rgb(222, 76, 76) 40%, rgb(222, 76, 76) 80%, transparent 100%);
+   transition: background 0.6s linear;
+}
+
+.red  #bulb-middle {
+   border-top: 20vmin solid  rgb(222, 76, 76);
+}
+
+.red #bulb-bottom {
+   background:  rgb(222, 76, 76);
+}
+
+/* END OF RED */
+
+/* blue */
+.blue #bulb {
+   -webkit-filter: drop-shadow(0 0 20px rgb(25, 62, 208));
+   filter: drop-shadow(0 0 20px rgb(25, 62, 208));
+ }
+
+.blue #bulb-top {
+   background: radial-gradient(circle at 20vmin 20vmin, rgb(146, 164, 238) 0%, rgb(25, 62, 208) 40%, rgb(25, 62, 208) 80%, transparent 100%);
+   transition: background 0.6s linear;
+}
+
+.blue  #bulb-middle {
+   border-top: 20vmin solid  rgb(25, 62, 208);
+}
+
+.blue #bulb-bottom {
+   background:  rgb(25, 62, 208);
+}
+
+/* END OF blue */
+
+/* pink */
+.pink #bulb {
+   -webkit-filter: drop-shadow(0 0 20px rgb(233, 44, 157));
+   filter: drop-shadow(0 0 20px rgb(233, 44, 157));
+ }
+
+.pink #bulb-top {
+   background: radial-gradient(circle at 20vmin 20vmin, rgb(250, 169, 218) 0%, rgb(233, 44, 157) 40%, rgb(233, 44, 157) 80%, transparent 100%);
+   transition: background 0.6s linear;
+}
+
+.pink  #bulb-middle {
+   border-top: 20vmin solid  rgb(233, 44, 157);
+}
+
+.pink #bulb-bottom {
+   background:  rgb(233, 44, 157);
+}
+
+/* END OF pink */
+
+/* green */
+.green #bulb {
+   -webkit-filter: drop-shadow(0 0 20px rgb(6, 121, 6));
+   filter: drop-shadow(0 0 20px rgb(6, 121, 6));
+ }
+
+.green #bulb-top {
+   background: radial-gradient(circle at 20vmin 20vmin, rgb(177, 241, 177) 0%, rgb(6, 121, 6) 40%, rgb(6, 121, 6) 80%, transparent 100%);
+   transition: background 0.6s linear;
+}
+
+.green  #bulb-middle {
+   border-top: 20vmin solid  rgb(6, 121, 6);
+}
+
+.green #bulb-bottom {
+   background:  rgb(6, 121, 6);
+}
+
+/* END OF green */
+
+/* mixed */
+.mixed #bulb {
+   -webkit-filter: drop-shadow(0 0 20px);
+   filter: drop-shadow(0 0 20px);
+ }
+
+.mixed #bulb-top {
+   animation: mixing-gradient-colours 6s linear infinite;
+}
+
+.mixed #bulb-middle {
+   animation: mixing-border-colours 6s linear infinite;
+}
+
+.mixed #bulb-bottom {
+   animation: mixing-colours 6s linear infinite;
+}
+
+/* END OF mixed */
+
+/* stopit */
+.stopit #bulb {
+   -webkit-filter: drop-shadow(0 0);
+   filter: drop-shadow(0 0);
+ }
+
+.stopit #bulb-top {
+   background: radial-gradient(circle at 20vmin 20vmin, rgb(150, 144, 144) 0%, rgb(150, 144, 144) 40%, rgb(150, 144, 144) 80%, transparent 100%);
+   transition: background 0.6s linear;
+}
+
+.stopit  #bulb-middle {
+   border-top: 20vmin solid  rgb(150, 144, 144);
+}
+
+.stopit #bulb-bottom {
+   background:  rgb(150, 144, 144);
+}
+
+/* END OF stopit */
+
+ /* OLD */
+ .light-bulb {
+   position: relative;
+   top: 10%;
+   
+   width: 270px;
+   height: 300px;
+   
+   background: rgb(225, 218, 218);
+   border-radius: 100%;
+
+   margin-bottom: 200px;
+   margin-top: 100px;
+}
+ 
+.light-bulb:before {
+   position: absolute;
+   content: "";
+
+   background: rgb(225, 218, 218);
+
+   width: 170px;
+   height: 80px;
+   
+   top: 16em;
+   left: 3em;
+
+   border-bottom-left-radius: 20%;
+   border-bottom-right-radius: 20%;
+}
+
+.light-bulb:after {
+   position: absolute;
+   content: "";
+
+   width: 145px;
+   height: 0;
+   
+   top: 20em;
+   left: 3em;
+
+   border-top: 80px solid grey;
+   border-left: 12px solid transparent;
+   border-right: 12px solid transparent;
+
+   border-radius: 2px;
+   border-bottom-left-radius: 20%;
+   border-bottom-right-radius: 20%;
+}
+
+
+@keyframes mixing-colours {
+   0% {
+       background: rgb(222, 76, 76); 
+       transition: background 0.6s linear;
+   }
+   
+   25% {
+       background: rgb(244, 244, 94);
+       transition: background 0.6s linear;
+   }
+  
+   50% {
+       background: rgb(25, 62, 208);
+       transition: background 0.6s linear;
+   }
+   
+   75% {
+       background: rgb(233, 44, 157);
+       transition: background 0.6s linear;
+   }
+   
+   100% {
+       background: rgb(6, 121, 6);
+       transition: background 0.6s linear;
+   }
+}
+
+@keyframes mixing-border-colours {
+   0% {
+       border-top: 20vmin solid rgb(222, 76, 76); 
+       transition: border-top 0.6s linear;
+   }
+   
+   25% {
+       border-top: 20vmin solid rgb(244, 244, 94);
+       transition: border-top 0.6s linear;
+   }
+  
+   50% {
+       border-top: 20vmin solid rgb(25, 62, 208);
+       transition: border-top 0.6s linear;
+   }
+   
+   75% {
+       border-top: 20vmin solid rgb(233, 44, 157);
+       transition: border-top 0.6s linear;
+   }
+   
+   100% {
+       border-top: 20vmin solid rgb(6, 121, 6);
+       transition: border-top 0.6s linear;
+   }
+}
+
+@keyframes mixing-gradient-colours {
+   0% {
+       background: radial-gradient(circle at 20vmin 20vmin, rgb(235, 152, 152) 0%, rgb(222, 76, 76) 40%, rgb(222, 76, 76) 80%, transparent 100%);
+       transition: background 0.6s linear;
+   }
+   
+   25% {
+       background: radial-gradient(circle at 20vmin 20vmin, #ff0 0%, #FFCC02 40%, #FFCC02 80%, transparent 100%);
+       transition: background 0.6s linear;
+   }
+  
+   50% {
+       background: radial-gradient(circle at 20vmin 20vmin, rgb(146, 164, 238) 0%, rgb(25, 62, 208) 40%, rgb(25, 62, 208) 80%, transparent 100%);
+       transition: background 0.6s linear;
+   }
+   
+   75% {
+       background: radial-gradient(circle at 20vmin 20vmin, rgb(250, 169, 218) 0%, rgb(233, 44, 157) 40%, rgb(233, 44, 157) 80%, transparent 100%);
+       transition: background 0.6s linear;
+   }
+   
+   100% {
+       background: radial-gradient(circle at 20vmin 20vmin, rgb(177, 241, 177) 0%, rgb(6, 121, 6) 40%, rgb(6, 121, 6) 80%, transparent 100%);
+       transition: background 0.6s linear;
+   }
+}

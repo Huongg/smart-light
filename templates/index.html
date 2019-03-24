@@ -3,6 +3,7 @@
   <head>
     <link href='{{ url_for('static', filename='css/main.css')}}' rel='stylesheet'>
     <link href='{{ url_for('static', filename='css/buttons.css')}}' rel='stylesheet'>
+    <link href='{{ url_for('static', filename='css/light-bulb.css')}}' rel='stylesheet'>
 
     <script type='text/javascript' src='{{ url_for('static', filename='src/index.js') }}'></script>
     <link href='https://fonts.googleapis.com/css?family=Baloo+Chettan' rel='stylesheet' type='text/css'>
@@ -36,7 +37,14 @@
         {% if signal %}
           <div id='signal-icon' class='loading' src=''></div>
         {% else %}
-          <div id='signal-icon' class='light-bulb'></div>
+          <div id='signal-icon' >
+            <div id="bulb">
+                <div id="bulb-top"></div>
+                <div id="bulb-middle"></div>
+                <div id="bulb-bottom"></div>
+            </div>
+            <div id='base'></div>
+          </div>
         {% endif %}
 
       <!-- </form> -->
